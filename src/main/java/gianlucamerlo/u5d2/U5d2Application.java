@@ -6,17 +6,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 @SpringBootApplication
+
 public class U5d2Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(U5d2Application.class, args);
+		var context = SpringApplication.run(U5d2Application.class, args);
 
-		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(U5d2Application.class);
-
-		Menu m = (Menu) ctx.getBean("menu");
-
+		Menu m = context.getBean(Menu.class);
 		m.printMenu();
-		ctx.close();
-	}
 
+
+	}
 }
