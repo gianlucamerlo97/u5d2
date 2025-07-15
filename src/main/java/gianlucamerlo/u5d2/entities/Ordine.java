@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Getter
@@ -13,15 +14,15 @@ public class Ordine {
     private int numberOrder;
     private StatoOrdine statoOrdine;
     private int numberCovered;
-    private LocalDate acquisition;
+    private LocalDateTime acquisitionTime;
     private List<Item> elements;
     private double coverageCost;
 
-    public Ordine(int numberOrder, StatoOrdine statoOrdine, int numberCovered, LocalDate acquisition, List<Item> elements, double coverageCost) {
+    public Ordine(int numberOrder, StatoOrdine statoOrdine, int numberCovered, LocalDateTime acquisitionTime, List<Item> elements, double coverageCost) {
         this.numberOrder = numberOrder;
         this.statoOrdine = statoOrdine;
         this.numberCovered = numberCovered;
-        this.acquisition = acquisition;
+        this.acquisitionTime = acquisitionTime;
         this.elements = elements;
         this.coverageCost = coverageCost;
     }
@@ -45,7 +46,7 @@ public class Ordine {
                 "numberOrder=" + numberOrder +
                 ", statoOrdine=" + statoOrdine +
                 ", numberCovered=" + numberCovered +
-                ", acquisition=" + acquisition +
+                ", acquisitionTime=" + acquisitionTime +
                 ", elements=" + elements +
                 ", coverageCost=" + coverageCost +
                 '}';
