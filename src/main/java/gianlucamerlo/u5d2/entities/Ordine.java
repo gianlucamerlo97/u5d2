@@ -31,7 +31,7 @@ public class Ordine {
         double total=0.0;
         if(elements!=null)
         {
-            for (int i=0;i<elements.size())
+            for (int i=0;i<elements.size();i++)
             {
                 total+=elements.get(i).getPrice();
             }
